@@ -34,7 +34,7 @@ abstract class Model{
             $stm->execute($params);
             while($rows[]=$stm->fetch(PDO::FETCH_ASSOC));
             $this->close_db();
-            //array_pop($rows);
+            array_pop($rows);
             return $rows;
 
         }
